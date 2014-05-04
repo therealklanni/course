@@ -72,8 +72,9 @@ headOr ::
   a
   -> List a
   -> a
-headOr =
-  error "todo"
+headOr x ys =
+  case ys of [] -> x 
+             (x:_) -> x
 
 -- | The product of the elements of a list.
 --
