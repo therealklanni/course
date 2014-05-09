@@ -102,8 +102,9 @@ product (x:xs) = x * product xs
 sum ::
   List Int
   -> Int
-sum =
-  error "todo"
+sum [] = error "empty list"
+sum [x] = x
+sum (x:xs) = x + sum(xs)
 
 -- | Return the length of the list.
 --
