@@ -86,8 +86,9 @@ headOr x ys =
 product ::
   List Int
   -> Int
-product =
-  error "todo"
+product [] = error "product of empty list"
+product [x] = x
+product (x:xs) = x * product xs
 
 -- | Sum the elements of the list.
 --
