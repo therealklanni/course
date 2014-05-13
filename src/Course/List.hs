@@ -73,7 +73,7 @@ headOr ::
   -> List a
   -> a
 headOr x ys =
-  case ys of [] -> x 
+  case ys of [] -> x
              (x:_) -> x
 
 -- | The product of the elements of a list.
@@ -115,8 +115,8 @@ sum (x:xs) = x + sum(xs)
 length ::
   List a
   -> Int
-length =
-  error "todo"
+length xs =
+   sum [1 | _ <- xs]
 
 -- | Map the given function on each element of the list.
 --
@@ -206,7 +206,7 @@ flatMap =
 
 -- | Convert a list of optional values to an optional list of values.
 --
--- * If the list contains all `Full` values, 
+-- * If the list contains all `Full` values,
 -- then return `Full` list of values.
 --
 -- * If the list contains one or more `Empty` values,
